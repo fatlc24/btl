@@ -1,0 +1,68 @@
+﻿@model TblContact;
+@{
+    ViewData["Title"] = "Liên hệ";
+    <link href="~/css/contact.css" rel="stylesheet" />
+}
+<div class="banner position-relative">
+    <img src="~/images/banner/lien-he.png" alt="Alternate Text" class="img-fluid" />
+    <div class="container">
+        <p class="position-absolute name-banner mb-0">Liên hệ</p>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<section class="container">
+    <div class="row my-md-5">
+        <div class="col-md-7">
+            <form asp-controller="home" asp-action="sendContact" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Tiêu đề<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="title" maxlength="50" required="required" name="title" value="" asp-for="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Nội dung<strong class="text-danger">*</strong></label>
+                            <textarea class="form-control" id="content" rows="3" required="required" asp-for="Content"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg w-100 btn-submit-contact" type="submit">Gửi</button>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div class="p-5 rounded h-100" style="background-color: lightskyblue;">
+                <h3 class="text-center mb-3">Thông tin chung TNGo</h3>
+                <div class="mb-3">
+                    <p>Mọi thắc mắc về dịch vụ, hợp tác kinh doanh, truyền thông xin vui lòng liên hệ theo thông tin dưới đây:</p>
+                    <p>
+                        <b>Hotline hỗ trợ 24/7</b>: <a href="tel:1900633548">1900 633 548</a>
+                    </p>
+                    <p>
+                        <b>Email</b>: <a href="mailto:info@vantaiso.com.vn"> info@vantaiso.com.vn</a>
+                    </p>
+                    <p>
+                        <b>Website</b>: <a href="https://tngo.vn" target="_blank"> www.tngo.vn</a>
+                    </p>
+                    <p>
+                        <b>Facebook</b>: <a href="https://www.facebook.com/tngo.vn" target="_blank"> tngo.vn</a>
+                    </p>
+                    <p>
+                        <b>Liên hệ quảng cáo </b>: 0974 222 790 - Alice Nguyễn (khu vực TP. Hồ Chí Minh, TP. Vũng Tàu, TP. Đà Nẵng)
+                    </p>
+                    <p>
+                        <i>
+                            Dịch vụ xe đạp công cộng TNGo - Một sản phẩm của <a class="text-black text-decoration-underline" href="#" target="_blank">Công ty cổ phần vận tải số Trí Nam</a>
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

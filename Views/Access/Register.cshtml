@@ -1,0 +1,66 @@
+﻿@model TblUser;
+
+@{
+    ViewData["Title"] = "Register";
+    <link href="~/css/login.css" rel="stylesheet" />
+}
+<div class="banner position-relative">
+    <img src="~/images/banner/login.png" alt="Alternate Text" class="img-fluid" />
+    <div class="container">
+        <p class="position-absolute name-banner mb-0">Đăng ký</p>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đăng ký</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="grid-members">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-lg-12">
+                <h2 class="pb-3 text-center title">ĐĂNG NHẬP</h2>
+                <p class="summary text-center">Elementum donec vel enim interdum mauris sit blandit massa dignissim. Mauris in nibh cursus proin convallis metus urna cursus pharetra. Dolor proin faucibus rhoncus ac risus aliquam.</p>
+                <div class="grid-item">
+                    <form asp-action="Register">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <p class="title_form text-center">Đăng ký</p>
+                        <div class="form-group">
+                            <input asp-for="Name" class="form-control" placeholder="Tên của bạn *" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Phone" class="form-control" placeholder="Số điện thoại *" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control" placeholder="Email *" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Username" class="form-control" placeholder="Tên đăng nhập *" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Password" class="form-control" placeholder="Nhập mật khẩu*" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="nlmatkhau" placeholder="Nhập lại mật khẩu*"/>
+                            <span class="text-danger">@TempData["Thông báo"]</span>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <span>Bạn đã có tài khoản?</span>
+                        <a asp-action="Login">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
