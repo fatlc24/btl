@@ -134,3 +134,4 @@ D:\FITHOU\web nc\visual\BTLwebNC\obj\Debug\net8.0\refint\BTLwebNC.dll
 D:\FITHOU\web nc\visual\BTLwebNC\obj\Debug\net8.0\BTLwebNC.pdb
 D:\FITHOU\web nc\visual\BTLwebNC\obj\Debug\net8.0\BTLwebNC.genruntimeconfig.cache
 D:\FITHOU\web nc\visual\BTLwebNC\obj\Debug\net8.0\ref\BTLwebNC.dll
+D:\FITHOU\web nc\visual\BTLwebNC\obj\Debug\net8.0\BTLwebNC.sourcelink.json

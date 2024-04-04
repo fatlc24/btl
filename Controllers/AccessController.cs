@@ -1,5 +1,9 @@
 ﻿using BTLwebNC.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace BTLwebNC.Controllers
@@ -20,6 +24,57 @@ namespace BTLwebNC.Controllers
             }
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> Login(TblUser userData)
+        {
+            if (userData.Username == null || userData.Password == null)
+            {
+                return View(userData);
+            }
+            else
+            {
+                var checkUsername = db.TblUsers.SingleOrDefault(x => x.Username == userData.Username && x.Password == userData.Password);
+
+                if (!PasswordMeetsRequirements(userData.Password))
+                {
+                    ModelState.AddModelError("Password", "Mật khẩu cần chứa ít nhất một số và một chữ ");
+                    return View(userData);
+                }
+                else if (userData.Password.Length < 7)
+                {
+                    ModelState.AddModelError("Password", "Mật khẩu phải lớn hơn 6 ký tự ");
+                    return View(userData);
+                }
+                else if (userData.Username.Length < 4)
+                {
+                    ModelState.AddModelError("Username", "Tài khoản phải lớn hơn 4 ký tự ");
+                    return View(userData);
+                }
+
+                else if (checkUsername == null)
+                {
+                    ModelState.AddModelError("Username", "Tài khoản không tồn tại hoặc sai mật khẩu ");
+                    return View(userData);
+                }
+                else
+                {
+
+                    if (userData.Username == "admin")
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+
+                    }
+
+                }
+
+
+            }
+
+        }
         public async Task<IActionResult> Register()
         {
             ClaimsPrincipal claims = HttpContext.User;
@@ -33,38 +88,44 @@ namespace BTLwebNC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(TblUser userData, string nlmatkhau)
         {
-            if (userData.Username == null || userData.Password == null || userData.Name == null || userData.Phone == null || userData.Email == null)
+            if (userData.Name == null || userData.Phone == null || userData.Email == null || userData.Username == null || userData.Password == null)
             {
                 return View(userData);
             }
             else
             {
+                var checkUsername = db.TblUsers.SingleOrDefault(x => x.Username == userData.Username);
                 if (!NotEmpty(userData.Name))
                 {
                     ModelState.AddModelError("Name", "The Name field is required.");
                     return View(userData);
                 }
+                else
                 if (!NotEmpty(userData.Phone))
                 {
                     ModelState.AddModelError("Phone", "The Phone field is required.");
                     return View(userData);
                 }
+                else
                 if (!IsValidPhoneNumber(userData.Phone))
                 {
                     ModelState.AddModelError("Phone", "Số điện thoại sai định dạng.");
                     return View(userData);
                 }
+                else
                 if (!NotEmpty(userData.Email))
                 {
                     ModelState.AddModelError("Email", "The Email field is required.");
                     return View(userData);
                 }
+                else
                 if (!IsValidEmail(userData.Email))
                 {
                     ModelState.AddModelError("Email", "Email sai định dạng.");
                     return View(userData);
                 }
-                var checkUsername = db.TblUsers.SingleOrDefault(x => x.Username == userData.Username);
+                else
+
 
                 if (!PasswordMeetsRequirements(userData.Password))
                 {
@@ -92,15 +153,14 @@ namespace BTLwebNC.Controllers
                     TempData["Thông báo"] = "Mật khẩu không khớp!";
                     return View(userData);
                 }
-                else
-                {
-                    db.TblUsers.Add(userData);
-                    db.SaveChanges();
-                    return RedirectToAction("Login");
-
-
-
-                }
+                var username = new SqlParameter("@username", userData.Username);
+                var password = new SqlParameter("@password", userData.Password);
+                var name = new SqlParameter("@name", userData.Name);
+                var phone = new SqlParameter("@phone", userData.Phone);
+                var email = new SqlParameter("@email", userData.Email);
+                db.Database.ExecuteSqlRaw("EXEC pr_dangky @username,@password,@name,@phone,@email", username, password, name, phone, email);
+                db.SaveChanges();
+                return RedirectToAction("Login");
             }
 
         }

@@ -39,7 +39,12 @@
                             <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="contact">liên hệ</a>
                         </li>
                         <li class="nav-item">
+                            @if (TempData["LoginData"] == null)
+                            {
                             <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Access" asp-action="Login">đăng nhập</a>
+                            }else{
+                                <p> xin chào: @TempData["Username"]</p>
+                            }
                         </li>
                     </ul>
                 </div>

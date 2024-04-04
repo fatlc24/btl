@@ -2,6 +2,7 @@ using BTLwebNC.Models;
 using BTLwebNC.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace BTLwebNC.Controllers
 {
@@ -19,6 +20,24 @@ namespace BTLwebNC.Controllers
 
         public IActionResult Index()
         {
+            var userClaims = User.Identity as ClaimsIdentity;
+            if (userClaims != null)
+            {
+                // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
+                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idLogin = userClaims.FindFirst("IDUseName");
+                var tenusername = userClaims.FindFirst("UseName");
+                if (usernameClaim != null)
+                {
+                    string username1 = tenusername.Value;
+                    string username = usernameClaim.Value;
+                    TempData["Username"] = username1;
+                    TempData["LoginData"] = username;
+                    // Now, 'username' contains the value of the Claim with ClaimTypes.NameIdentifier.
+                }
+
+                // You can also access your custom claim ("OtherProperties" in this case) in a similar manner.
+            }
             return View();
         }
 
