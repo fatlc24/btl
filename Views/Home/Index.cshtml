@@ -1,7 +1,148 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    
+﻿@model List<TblNews>
+@{
+    ViewData["Title"] = "WEB NC G15";
+    <link href="~/css/home.css" rel="stylesheet" />
 }
+<style>
+    .banner-home {
+        position: relative;
+    }
 
+    .owl-nav button {
+        background: #eee !important;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+    }
 
+    owl-nav button span {
+        color: #FFF !important;
+        font-size: 10px !important;
+    }
 
+    .owl-prev {
+    }
+
+    .owl-next {
+        right: 0;
+    }
+
+    .item-new-cat {
+        animation: 0.3s all ease-in-out;
+    }
+
+        .item-new-cat .overflow-hidden img {
+            animation: 0.3s all ease-in-out;
+            height: 231px;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .item-new-cat a {
+            font-size: 15px;
+            padding-top: 10px;
+            font-weight: 500;
+            color: #222222;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+        .item-new-cat .time {
+            font-size: 16px;
+            padding: 10px 0;
+            color: #808080;
+        }
+
+        .item-new-cat p {
+            font-size: 16px;
+            color: #222;
+        }
+
+        .item-new-cat:hover .overflow-hidden img {
+            transform: scale(1.5);
+            animation: 0.3s linear infinite;
+        }
+
+    .list-news-home .owl-nav button{
+        top: 40%;
+    }
+</style>
+<div class="banner-home owl-carousel owl-theme">
+    <div class="item">
+        <img src="~/images/banner/home.png" alt="Alternate Text" />
+    </div>
+    <div class="item">
+        <img src="~/images/banner/home1.jpg" alt="Alternate Text" />
+    </div>
+    <div class="item">
+        <img src="~/images/banner/home2.jpg" alt="Alternate Text" />
+    </div>
+</div>
+<div class="container">
+    <section class="row">
+        <div class="col-md-6 my-auto">
+            <h2>Giới thiệu về Web NC G15</h2>
+            <p>
+                Dịch vụ chia sẻ phương tiện cho cộng đồng được các bạn nhòm G15 lên ý tưởng và thực hiện đem đến một hình thức giao thông đô thị mới văn minh, tiện lợi, tốt cho sức khỏe và thân thiện với môi trường. Chỉ với vài thao tác đơn giản trên website, người tham gia giao thông có thể dễ dàng thuê xe
+            </p>
+        </div>
+        <div class="col-md-6">
+            <iframe class="rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1950948193457!2d105.83604137461919!3d20.984815280653546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac5d6535ee67%3A0xfdf97af16d2b8621!2zOTYgUC4gxJDhu4tuaCBDw7RuZywgUGjGsMahbmcgTGnhu4d0LCBUaGFuaCBYdcOibiwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1712466449412!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</div>
+<section class="manuals py-5 my-5" id="HDSD">
+    <div class="container">
+        <div class="using">
+            <h2 class="title text-capitalize">cách sử dụng</h2>
+            <p>Sau khi <span>vào website</span>, sử dụng dễ dàng với 3 bước: Tìm xe - Liên hệ - Trả xe</p>
+            <div class="owl-carousel owl-theme " id="manualsct">
+                <div class="item" data-dot="
+              <button>1</button>
+              <h2>Đăng ký thuê xe</h2>
+              <p>Chạm vào nút ''Mở khóa'' và quét mã QR trên xe đạp/khóa xe để tự động mở khóa.</p>">
+          <img src="/images/use-1.png" alt="">
+        </div>
+                <div class="item"
+                     data-dot="
+
+                  <button>2</button>
+                  <h2>liên hệ</h2>
+                  <p>Tận hưởng chuyến đi, nên đội mũ bảo hiểm và tuân thủ luật giao thông. Trong quá trình sử dụng bạn có thể khóa xe tạm thời và mở lại bất kì lúc nào bằng ứng dụng di động.</p>">
+          <img src="/images/use-2.png" alt="">
+        </div>
+                <div class="item"
+                     data-dot="
+
+                      <button>3</button>
+                      <h2>Trả xe</h2>
+                      <p>Trả xe đạp về trạm TNGo bất kỳ. Thực hiện đóng khóa xe và xác nhận kết thúc chuyến đi trên ứng dụng TNGo.</p>">
+          <img src="/images/use-3.png" alt="">
+        </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 class="text-center">Tin Tức</h2>
+        <div class="list-news-home owl-carousel owl-theme">
+            @foreach (var item in Model)
+            {
+                <a class="item-new-cat text-decoration-none" asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.Id">
+                    <div class="overflow-hidden">
+                        <img src="@item.Image" alt="@item.Name" />
+                    </div>
+                    <p class="mb-0 text-decoration-none text-break text-black">@item.Name</p>
+                    <div class="time">@item.Time?.ToString("dd/MM/yyyy")</div>
+                </a>
+            }
+        </div>
+    </div>
+</section>

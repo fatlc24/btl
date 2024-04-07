@@ -5,17 +5,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
 
 namespace BTLwebNC.Controllers
 {
     public class AccessController : Controller
     {
         RentalDbContext db = new RentalDbContext();
-        public IActionResult Index()
+        private readonly IHttpContextAccessor httpContextAccessor;
+        public AccessController(IHttpContextAccessor httpContextAccessor)
         {
-            return View();
+            this.httpContextAccessor = httpContextAccessor;
+
         }
-        public IActionResult Login()
+
+        public IActionResult Index()
         {
             ClaimsPrincipal claims = HttpContext.User;
             if (claims.Identity.IsAuthenticated)
@@ -23,6 +27,10 @@ namespace BTLwebNC.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View();
+        }
+        public IActionResult Login()
+        {
+            return View("Login");
         }
         [HttpPost]
         public async Task<IActionResult> Login(TblUser userData)
@@ -58,23 +66,48 @@ namespace BTLwebNC.Controllers
                 }
                 else
                 {
+                    //if (userData.Username == "admin")
+                    //{
+                    //    return RedirectToAction("Index", "Admin");
+                    //}
+                    //else
+                    //{
+                    //return RedirectToAction("Index", "Home");
 
-                    if (userData.Username == "admin")
+                    //}
+                    // sửa theo session
+
+                    httpContextAccessor.HttpContext.Session.SetString("username", userData.Username);
+                    // sử dụng claim
+                    List<Claim> claims = new List<Claim>()
                     {
-                        return RedirectToAction("Index", "Admin");
-                    }
-                    else
+                        new Claim(ClaimTypes.NameIdentifier, checkUsername.Username),
+                        new Claim("id_user",userData.Id.ToString()),
+                        new Claim("UseName",userData.Username),
+                        new Claim("Name",checkUsername.Name),
+                        new Claim("Email",checkUsername.Email),
+                        new Claim("Phone",checkUsername.Phone),
+                    };
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    AuthenticationProperties properties = new AuthenticationProperties()
                     {
-                        return RedirectToAction("Index", "Home");
+                        AllowRefresh = true,
+                        IsPersistent = true,
+                    };
 
-                    }
-
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+                    return RedirectToAction("Index", "Home");
                 }
-
-
             }
 
         }
+        //httpContextAccessor.HttpContext.Session.clear(); hàm logout 
+        //public IActionResult Logout()
+        //{
+        //    httpContextAccessor.HttpContext.Session.Clear();
+        //    httpContextAccessor.HttpContext.Session.Remove("username");
+        //    return View("Login");
+        //}
         public async Task<IActionResult> Register()
         {
             ClaimsPrincipal claims = HttpContext.User;

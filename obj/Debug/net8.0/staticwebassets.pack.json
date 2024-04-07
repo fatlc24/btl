@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\css\\contact.css"
     },
     {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\news.css",
+      "PackagePath": "staticwebassets\\css\\news.css"
     },
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\site.css",
@@ -33,12 +41,28 @@
       "PackagePath": "staticwebassets\\images\\Rectangle 670.jpg"
     },
     {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\home.png",
+      "PackagePath": "staticwebassets\\images\\banner\\home.png"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\home1.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\home1.jpg"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\home2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\home2.jpg"
+    },
+    {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\lien-he.png",
       "PackagePath": "staticwebassets\\images\\banner\\lien-he.png"
     },
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\login.png",
       "PackagePath": "staticwebassets\\images\\banner\\login.png"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\banner\\tin-tuc.png",
+      "PackagePath": "staticwebassets\\images\\banner\\tin-tuc.png"
     },
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\bg-11.png",

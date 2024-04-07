@@ -1,0 +1,66 @@
+﻿/*newsss*/
+.banner .name-banner {
+    top: 35%;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.banner .breadcrumb {
+    position: absolute;
+    top: 49%;
+    align-items: center;
+}
+
+    .banner .breadcrumb .breadcrumb-item a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .banner .breadcrumb .breadcrumb-item.active {
+        color: #fe0002;
+    }
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
+}
+
+.item-new-cat {
+    animation: 0.3s all ease-in-out;
+}
+
+    .item-new-cat .overflow-hidden img {
+        animation: 0.3s all ease-in-out;
+        height: 231px;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .item-new-cat a {
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 500;
+        color: #222222;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+
+    .item-new-cat .time {
+        font-size: 16px;
+        padding: 10px 0;
+        color:#808080;
+    }
+    .item-new-cat p {
+        font-size: 16px;
+        color: #222;
+    }
+    .item-new-cat:hover .overflow-hidden img {
+        transform: scale(1.5);
+        animation: 0.3s linear infinite;
+    }

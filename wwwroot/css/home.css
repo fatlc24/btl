@@ -1,0 +1,181 @@
+﻿.manuals header {
+    margin-bottom: 50px;
+    background-size: contain;
+    margin-left: -30px;
+    padding-left: 60px;
+}
+
+    .manuals header h2 {
+        font-size: 50px;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .manuals header h3 {
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .manuals header h4 {
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+.manuals .owl-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+}
+
+.manuals .owl-theme .owl-dots .owl-dot {
+    display: flow-root;
+}
+
+    .manuals .owl-theme .owl-dots .owl-dot:first-child {
+        margin-top: 30px;
+        margin-left: -20px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot:nth-child(2) {
+        margin-top: 90px;
+        margin-left: 90px;
+    }
+
+    /*.manuals .owl-theme .owl-dots .owl-dot:nth-child(3) {
+        margin-top: 60px;
+        margin-left: 75px;
+    }*/
+
+    .manuals .owl-theme .owl-dots .owl-dot:last-child {
+        /* margin-top: 20px;
+        margin-left: -20px;*/
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot button {
+        width: 75px;
+        height: 75px;
+        border-radius: 75px;
+        border: none;
+        background: #333;
+        color: white;
+        font-size: 25px;
+        float: left;
+        margin-right: 30px;
+    }
+
+.manuals .owl-theme .owl-dots .active button {
+    background: #0090ff;
+}
+
+.manuals .owl-theme .owl-dots .owl-dot h2 {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.manuals .owl-theme .owl-dots .active h2 {
+    color: #0090ff;
+}
+
+.manuals .owl-theme .owl-dots .owl-dot p {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 106px;
+}
+
+.manuals .owl-stage-outer {
+    width: 65%;
+    background: url(/images/bg-11.png) top right no-repeat;
+}
+
+.manuals .item img {
+    width: 58%;
+    margin-top: 72px;
+    height: 613px;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    object-fit: fill;
+}
+
+@media (max-width: 767px) {
+    .manuals header h2 {
+        font-size: 35px;
+    }
+
+    .price-title {
+        font-size: 35px;
+    }
+
+    .manuals .owl-stage-outer {
+        width: 100%;
+    }
+
+    .manuals .owl-dots {
+        position: initial;
+        width: 100%;
+    }
+
+    .manuals .item img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .manuals .owl-stage-outer {
+        background: url(image/bg-11.png) right no-repeat;
+        background-size: contain;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot:first-child {
+        margin: 0px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot:nth-child(2) {
+        margin: 0px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot:nth-child(3) {
+        margin: 0px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot:last-child {
+        margin: 0px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot button {
+        float: none;
+        margin: 0;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot h2 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        margin: 15px 0;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot p {
+        text-align: center;
+        font-size: 18px;
+        margin: 0px;
+        height: 80px;
+    }
+
+    .manuals .owl-theme .owl-dots .owl-dot {
+        display: none;
+    }
+
+    .manuals .owl-theme .owl-dots .active {
+        display: block;
+    }
+}
+
+/*news*/

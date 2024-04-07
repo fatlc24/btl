@@ -22,6 +22,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
+                            <label for="name" class="form-label">Họ Và Tên<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="name" maxlength="50" required="required" name="name" disabled placeholder="@TempData["id_user"]" value="" asp-for="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Email<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="phone" maxlength="50" required="required" name="phone" disabled placeholder="@TempData["LoginPhone"]" value="" asp-for="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Số điện thoại<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="email" maxlength="50" required="required" name="email" disabled placeholder="@TempData["LoginEmail"]" value="" asp-for="Title">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
                             <label for="title" class="form-label">Tiêu đề<strong class="text-danger">*</strong></label>
                             <input type="text" class="form-control" id="title" maxlength="50" required="required" name="title" value="" asp-for="Title">
                         </div>

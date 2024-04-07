@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BTLwebNC</title>
+    <link type='image/x-icon' href='/images/logo_share_car.svg' rel='icon' />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/BTLwebNC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/images/logo_share_car.svg" class="img-fluid" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end nav-right">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="usermanual">Hướng dẫn sử dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="">đăng ký thuê xe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="">đăng ký cho thuê xe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="contact">liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="mb-0 nav-link text-dark"> xin chào: @TempData["LoginData_name"] <a class="text-dark" asp-area="" asp-controller="Home" asp-action="Logout"><i class="fa-solid fa-right-to-bracket ms-2"></i></a></span>
+                        </li>
+                        @* <li class="nav-item ">
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("username") == null)
+                        {
+                        <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Access" asp-action="Login">đăng nhập</a>
+                        }else
+
+                        {
+
+                        }
+                        </li>
+                        <li class="nav-item">
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("username") != null)
+                        {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Access" asp-action="Logout">@HttpContextAccessor.HttpContext.Session.GetString("username") <i class="fa-solid fa-right-to-bracket"></i></a>
+
+                        }
+                        </li> *@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - BTLwebNC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/home.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

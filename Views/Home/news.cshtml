@@ -1,0 +1,37 @@
+﻿@model List<TblNews>
+@{
+    ViewData["Title"] = "Tin tức";
+
+    <link href="~/css/news.css" rel="stylesheet" />
+}
+
+
+<div class="banner position-relative">
+    <img src="~/images/banner/tin-tuc.png" alt="Alternate Text" class="img-fluid" />
+    <div class="container">
+        <p class="position-absolute name-banner mb-0">Tin Tức</p>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tin Tức</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center py-3">Tin Tức</h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <a class="item-new-cat text-decoration-none" asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.Id">
+                    <div class="overflow-hidden">
+                        <img src="@item.Image" alt="@item.Name" />
+                    </div>
+                    <p class="mb-0 text-decoration-none text-break text-black">@item.Name</p>
+                    <div class="time">@item.Time?.ToString("dd/MM/yyyy")</div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
