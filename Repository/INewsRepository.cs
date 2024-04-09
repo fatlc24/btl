@@ -6,6 +6,7 @@ namespace BTLwebNC.Repository
     public interface INewsRepository
     {
         List<TblNews> GetAllNews();
+        List<TblNews> GetFirst5NewsSortedById();
         TblNews GetNewsByID(int id);
     }
 }

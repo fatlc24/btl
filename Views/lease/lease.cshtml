@@ -1,0 +1,94 @@
+﻿@model TblTtxe;
+@{
+    ViewData["Title"] = "Đăng ký cho thuê xe";
+    <link href="~/css/lease.css" rel="stylesheet" />
+}
+<div class="banner position-relative">
+    <img src="~/images/banner/lien-he.png" alt="Alternate Text" class="img-fluid" />
+    <div class="container">
+        <p class="position-absolute name-banner mb-0">Đăng ký cho thuê xe</p>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đăng ký cho thuê xe</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<section class="container">
+    <div class="row my-md-5">
+        <div class="col-md-7">
+            <form asp-controller="Lease" asp-action="Lease" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group mb-3">
+                            <label for="tenxe" class="form-label">Tên xe<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="tenxe" maxlength="50" required="required" name="tenxe" value="" asp-for="Tenxe">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="status" class="form-label">Trạng thái<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="status" maxlength="50" required="required" name="status" value="" asp-for="Status">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="namsanxuat" class="form-label">Năm sản xuất<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="namsanxuat" maxlength="50" required="required" name="namsanxuat" value="" asp-for="Namsanxuat">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group mb-3">
+                            <label for="imageInput" class="form-label">Upload Ảnh <strong class="text-danger">*</strong></label>
+                            <input type="file" class="form-control" required="required" name="imageInput" id="imageInput" />
+                            <input type="hidden" asp-for="Image" id="ImgConvert" />
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg w-100 btn-submit-contact" type="submit">Gửi</button>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <div class="p-5 rounded h-100" style="background-color: lightskyblue;">
+                <h3 class="text-center mb-3">Thông tin chung TNGo</h3>
+                <div class="mb-3">
+                    <p>Mọi thắc mắc về dịch vụ, hợp tác kinh doanh, truyền thông xin vui lòng liên hệ theo thông tin dưới đây:</p>
+                    <p>
+                        <b>Hotline hỗ trợ 24/7</b>: <a href="tel:1900633548">1900 633 548</a>
+                    </p>
+                    <p>
+                        <b>Email</b>: <a href="mailto:info@vantaiso.com.vn"> info@vantaiso.com.vn</a>
+                    </p>
+                    <p>
+                        <b>Website</b>: <a href="https://tngo.vn" target="_blank"> www.tngo.vn</a>
+                    </p>
+                    <p>
+                        <b>Facebook</b>: <a href="https://www.facebook.com/tngo.vn" target="_blank"> tngo.vn</a>
+                    </p>
+                    <p>
+                        <b>Liên hệ quảng cáo </b>: 0974 222 790 - Alice Nguyễn (khu vực TP. Hồ Chí Minh, TP. Vũng Tàu, TP. Đà Nẵng)
+                    </p>
+                    <p>
+                        <i>
+                            Dịch vụ xe đạp công cộng TNGo - Một sản phẩm của <a class="text-black text-decoration-underline" href="#" target="_blank">Công ty cổ phần vận tải số Trí Nam</a>
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    // Chuyển đổi ảnh thành base64 string khi người dùng chọn ảnh
+    document.getElementById('imageInput').addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('ImgConvert').value = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>

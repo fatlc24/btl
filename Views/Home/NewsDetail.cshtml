@@ -1,10 +1,39 @@
-﻿@model TblNews
+﻿@model ModelsNews
 @{
     ViewData["Title"] = "Tin tức";
 
     <link href="~/css/news.css" rel="stylesheet" />
 }
+<style>
+    .detail_new h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
 
+    .detail_new img {
+        margin: 10px 0;
+    }
+
+    .right .title-right {
+        color: #045ac1;
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eeeeee;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .right .title-right::after {
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 2px;
+            left: 0;
+            background-color: #fe0002;
+            bottom: 0;
+        }
+</style>
 <div class="banner position-relative">
     <img src="~/images/banner/tin-tuc.png" alt="Alternate Text" class="img-fluid" />
     <div class="container">
@@ -17,3 +46,39 @@
         </nav>
     </div>
 </div>
+<section class="pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="detail_new">
+                    <h2>@Model.NewsDetail.Name</h2>
+                    <img src="@Model.NewsDetail.Image" class="img-fluid" />
+                    <div class="content_news">
+                        @Html.Raw(Model.NewsDetail.Content);
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="right">
+                    <div class="title-right">Bài viết liên quan</div>
+                    <div class="row">
+                        @foreach (var item in Model.ListNews)
+                        {
+                            <div class="col-md-4 mb-0 mb-md-3">
+                                <a class="item-new-cat text-decoration-none" asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.Id">
+                                    <div class="overflow-hidden">
+                                        <img src="@item.Image" alt="@item.Name" style="height:114px" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-8 mb-0 mb-md-3">
+                                <a class="mb-0 text-decoration-none text-break text-black" asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.Id">@item.Name</a>
+                                <div class="time">@item.Time?.ToString("dd/MM/yyyy")</div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

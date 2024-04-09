@@ -5,7 +5,7 @@ namespace BTLwebNC.Repository
 {
     public interface IcontactRepository
     {
-        TblContact sendContact(TblContact sendContact);
+        TblContact Contact(TblContact Contact);
         //TblUser GetUser(string username);
         
     }

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
+using Microsoft.Extensions.Hosting;
 
 namespace BTLwebNC.Controllers
 {
@@ -17,7 +18,7 @@ namespace BTLwebNC.Controllers
 
         private readonly IHttpContextAccessor httpContextAccessor;
 
-        public HomeController(ILogger<HomeController> logger, IcontactRepository repository, IHttpContextAccessor httpContextAccessor,INewsRepository newsRepository)
+        public HomeController(ILogger<HomeController> logger, IcontactRepository repository, IHttpContextAccessor httpContextAccessor, INewsRepository newsRepository)
         {
             _logger = logger;
             this.repository = repository;
@@ -31,13 +32,13 @@ namespace BTLwebNC.Controllers
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
                 var id_user = userClaims.FindFirst("id_user");
-                if (usernameClaim != null)
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
@@ -45,7 +46,7 @@ namespace BTLwebNC.Controllers
                     string phonedangnhap = phone.Value;
                     string id = id_user.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
@@ -70,22 +71,25 @@ namespace BTLwebNC.Controllers
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
-                if (usernameClaim != null)
+                var id_user = userClaims.FindFirst("id_user");
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
                     string emaildangnhap = email.Value;
                     string phonedangnhap = phone.Value;
+                    string id = id_user.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
+                    TempData["id_user"] = id;
                     // Now, 'username' contains the value of the Claim with ClaimTypes.NameIdentifier.
                 }
 
@@ -99,22 +103,25 @@ namespace BTLwebNC.Controllers
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
-                if (usernameClaim != null)
+                var id_user = userClaims.FindFirst("id_user");
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
                     string emaildangnhap = email.Value;
                     string phonedangnhap = phone.Value;
+                    string id = id_user.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
+                    TempData["id_user"] = id;
                     // Now, 'username' contains the value of the Claim with ClaimTypes.NameIdentifier.
                 }
 
@@ -123,34 +130,37 @@ namespace BTLwebNC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult sendContact(TblContact sendContact)
+        public IActionResult Contact(TblContact sendContact)
         {
             var userClaims = User.Identity as ClaimsIdentity;
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
-                if (usernameClaim != null)
+                var id_user = userClaims.FindFirst("id_user");
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
                     string emaildangnhap = email.Value;
                     string phonedangnhap = phone.Value;
+                    string id = id_user.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
+                    TempData["id_user"] = id;
                     // Now, 'username' contains the value of the Claim with ClaimTypes.NameIdentifier.
                 }
 
                 // You can also access your custom claim ("OtherProperties" in this case) in a similar manner.
             }
-            repository.sendContact(sendContact);
+            repository.Contact(sendContact);
             return View("contact");
         }
         public async Task<IActionResult> LogOut()
@@ -164,22 +174,25 @@ namespace BTLwebNC.Controllers
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
-                if (usernameClaim != null)
+                var id_user = userClaims.FindFirst("id_user");
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
                     string emaildangnhap = email.Value;
                     string phonedangnhap = phone.Value;
+                    string id = id_user.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
+                    TempData["id_user"] = id;
                     // Now, 'username' contains the value of the Claim with ClaimTypes.NameIdentifier.
                 }
 
@@ -194,19 +207,20 @@ namespace BTLwebNC.Controllers
             if (userClaims != null)
             {
                 // Find the claim by its type (ClaimTypes.NameIdentifier in this case)
-                var usernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
+                var idusernameClaim = userClaims.FindFirst(ClaimTypes.NameIdentifier);
                 var tenusername = userClaims.FindFirst("UseName");
                 var name = userClaims.FindFirst("Name");
                 var email = userClaims.FindFirst("Email");
                 var phone = userClaims.FindFirst("Phone");
-                if (usernameClaim != null)
+                var id_user = userClaims.FindFirst("id_user");
+                if (idusernameClaim != null)
                 {
                     string username1 = tenusername.Value;
                     string tendangnhap = name.Value;
                     string emaildangnhap = email.Value;
                     string phonedangnhap = phone.Value;
                     TempData["Username"] = username1;
-                    TempData["LoginData"] = usernameClaim;
+                    TempData["idLoginData"] = idusernameClaim;
                     TempData["LoginData_name"] = tendangnhap;
                     TempData["LoginEmail"] = emaildangnhap;
                     TempData["LoginPhone"] = phonedangnhap;
@@ -215,8 +229,13 @@ namespace BTLwebNC.Controllers
 
                 // You can also access your custom claim ("OtherProperties" in this case) in a similar manner.
             }
+
+            var resultNews = new ModelsNews();
             var newsdetail = newsRepository.GetNewsByID(id);
-            return View(newsdetail);
+            var listNews = newsRepository.GetFirst5NewsSortedById();
+            resultNews.NewsDetail = newsdetail;
+            resultNews.ListNews = listNews;
+            return View(resultNews);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

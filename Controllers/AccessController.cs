@@ -81,8 +81,8 @@ namespace BTLwebNC.Controllers
                     // sử dụng claim
                     List<Claim> claims = new List<Claim>()
                     {
-                        new Claim(ClaimTypes.NameIdentifier, checkUsername.Username),
-                        new Claim("id_user",userData.Id.ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, checkUsername.Id.ToString()),
+                        new Claim("id_user",checkUsername.Id.ToString()),
                         new Claim("UseName",userData.Username),
                         new Claim("Name",checkUsername.Name),
                         new Claim("Email",checkUsername.Email),

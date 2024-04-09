@@ -18,12 +18,12 @@
 <section class="container">
     <div class="row my-md-5">
         <div class="col-md-7">
-            <form asp-controller="home" asp-action="sendContact" method="post">
+            <form asp-controller="home" asp-action="Contact" method="post">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
                             <label for="name" class="form-label">Họ Và Tên<strong class="text-danger">*</strong></label>
-                            <input type="text" class="form-control" id="name" maxlength="50" required="required" name="name" disabled placeholder="@TempData["id_user"]" value="" asp-for="Title">
+                            <input type="text" class="form-control" id="name" maxlength="50" required="required" name="name" disabled placeholder="@TempData["LoginData_name"]" value="" asp-for="Title">
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -16,6 +16,12 @@ namespace BTLwebNC.Repository
             return _context.TblNews.ToList();
         }
 
+        public List<TblNews> GetFirst5NewsSortedById()
+        {
+            var randomNews = _context.TblNews.OrderBy(x => Guid.NewGuid()).Take(3).ToList();
+            return randomNews;
+        }
+
         public TblNews GetNewsByID(int id)
         {
             return _context.TblNews.FirstOrDefault(p => p.Id == id);

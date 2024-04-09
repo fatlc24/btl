@@ -15,6 +15,7 @@ builder.Services.AddDbContext<RentalDbContext>(x => x.UseSqlServer(connectionStr
 // sử dụng interface
 builder.Services.AddScoped<IcontactRepository, ContactRepositoryImpl>();
 builder.Services.AddScoped<INewsRepository, NewsRepositoryImpl>();
+builder.Services.AddScoped<ILeaseRepository, LeaseRepositoryImpl>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => {
     option.LoginPath = "/Access/Login";
