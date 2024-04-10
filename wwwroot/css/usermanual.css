@@ -1,4 +1,33 @@
-﻿.manuals header {
+﻿.banner .name-banner {
+    top: 35%;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.banner .breadcrumb {
+    position: absolute;
+    top: 49%;
+    align-items: center;
+}
+
+    .banner .breadcrumb .breadcrumb-item a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .banner .breadcrumb .breadcrumb-item.active {
+        color: #fe0002;
+    }
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
+}
+
+
+.manuals header {
     margin-bottom: 50px;
     background-size: contain;
     margin-left: -30px;

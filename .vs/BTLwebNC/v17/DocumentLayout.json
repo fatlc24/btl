@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\controllers\\leasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:controllers\\leasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\leaserepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\leaserepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\contactrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\contactrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\models\\rentaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:models\\rentaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContactRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\ContactRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\ContactRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\ContactRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\ContactRepositoryImpl.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAABmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T10:28:23.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T10:22:53.924Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -72,41 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAswKIAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T10:22:38.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LeaseController.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\LeaseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LeaseController.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\LeaseController.cs",
-              "RelativeToolTip": "Controllers\\LeaseController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAIAwwFIAAAAvAAAA",
+              "Title": "RentalDbContext.cs",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\RentalDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\RentalDbContext.cs",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\RentalDbContext.cs",
+              "RelativeToolTip": "Models\\RentalDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T10:21:31.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LeaseRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\LeaseRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\LeaseRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\LeaseRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\LeaseRepositoryImpl.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwB4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T10:20:33.893Z",
+              "WhenOpened": "2024-04-10T14:12:27.917Z",
               "EditorCaption": ""
             }
           ]
