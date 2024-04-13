@@ -25,8 +25,16 @@
       "PackagePath": "staticwebassets\\css\\news.css"
     },
     {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\rent.css",
+      "PackagePath": "staticwebassets\\css\\rent.css"
+    },
+    {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\user.css",
+      "PackagePath": "staticwebassets\\css\\user.css"
     },
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\css\\usermanual.css",
@@ -75,6 +83,18 @@
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\logo_share_car.svg",
       "PackagePath": "staticwebassets\\images\\logo_share_car.svg"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\rent\\lich.svg",
+      "PackagePath": "staticwebassets\\images\\rent\\lich.svg"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\rent\\money.svg",
+      "PackagePath": "staticwebassets\\images\\rent\\money.svg"
+    },
+    {
+      "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\rent\\status.svg",
+      "PackagePath": "staticwebassets\\images\\rent\\status.svg"
     },
     {
       "Id": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\wwwroot\\images\\use-1.png",

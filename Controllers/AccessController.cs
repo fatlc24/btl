@@ -66,10 +66,10 @@ namespace BTLwebNC.Controllers
                 }
                 else
                 {
-                    //if (userData.Username == "admin")
-                    //{
-                    //    return RedirectToAction("Index", "Admin");
-                    //}
+                    if (userData.Username == "admin")
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
                     //else
                     //{
                     //return RedirectToAction("Index", "Home");
