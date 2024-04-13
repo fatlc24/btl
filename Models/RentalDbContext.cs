@@ -120,6 +120,13 @@ public partial class RentalDbContext : DbContext
             entity.Property(e => e.Tenxe)
                 .HasMaxLength(255)
                 .HasColumnName("tenxe");
+            entity.Property(e => e.Tien)
+                .HasMaxLength(255)
+                .HasColumnName("tien");
+            entity.Property(e => e.IsCheck)
+                .HasMaxLength(255)
+                .HasColumnName("ischeck");
+            entity.Property(e => e.Publish).HasColumnName("publish");
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.TblTtxes)
                 .HasForeignKey(d => d.IdUser)

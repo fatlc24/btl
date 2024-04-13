@@ -1,4 +1,148 @@
-﻿@{
+﻿@model List<TblTtxe>;
+@{
     ViewData["Title"] = "Đăng ký thuê xe";
-    //<link href="~/css/lease.css" rel="stylesheet" />
+    <link href="~/css/rent.css" rel="stylesheet" />
 }
+<style>
+    .banner img {
+        width: 100%;
+    }
+</style>
+<div class="banner position-relative">
+    <img src="~/images/banner/lien-he.png" alt="Alternate Text" class="img-fluid" />
+    <div class="container">
+        <p class="position-absolute name-banner mb-0">Đăng ký thuê xe</p>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đăng ký thuê xe</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center text-uppercase mt-3 py-4">Danh sách xe</h2>
+    @if (Model != null && Model.Any())
+    {
+        <div class="list-xe">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <p class="name">@item.Tenxe</p>
+                                    <div class="bot d-flex justify-content-between ">
+                                        <p class="mb-0 trang-thai">
+                                            <img src="/images/rent/status.svg" />
+                                            @item.Status
+                                        </p>
+                                        <p class="mb-0 nam">
+                                            <img src="/images/rent/lich.svg" />
+                                            @item.Namsanxuat
+                                        </p>
+                                        <p class="mb-0 tien">
+                                            <img src="/images/rent/money.svg" />
+                                            @Convert.ToDecimal(item.Tien).ToString("N0") VNĐ
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 my-auto">
+                                    <button onclick="onclickGetUser(event)" type="button" class="btn btn-primary text-capitalize btn-chi-tiet" data-id-user="@item.IdUser" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.Id">
+                                        Chi tiết
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-danger">Hiện tại đang không có xe....! Vui lòng quay lại sau ít phút ^_^</p>
+    }
+
+</div>
+
+<!-- Button trigger modal -->
+@foreach (var item in Model)
+{
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông tin xe @item.Tenxe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="title">Thông tin</div>
+                            <div class="popup"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="@item.Image" alt="Alternate Text" class="img-fluid" />
+                            <p class="text-center">@item.Tenxe</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Tên Xe: @item.Tenxe</p>
+                            <p>Giá: @item.Tien</p>
+                            <p>Tình trạng: @item.Status</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a asp-action="saveRent" asp-controller="Rent" type="button" class="btn btn-primary" asp-route-id="@item.Id">Chọn xe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    var idTTxe;
+    function onclickGetUser(event) {
+        // Lấy giá trị của thuộc tính 'data-id-user'
+        var userId = event.target.getAttribute('data-id-user');
+        idTTxe = event.target.getAttribute('data-id-ttxe');
+        // In ra giá trị userId để kiểm tra
+        console.log("User ID:", userId);
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var user = JSON.parse(xhr.responseText);
+                    console.log(user);
+                    showUser(user);
+                } else {
+                    console.error('Lỗi: ' + xhr.status);
+                }
+            }
+        };
+        xhr.open('GET', `/Rent/Getuser?id=` + userId, true);
+        xhr.send();
+    }
+    function showUser(user) {
+        console.log(user);
+        let popup = `
+                        <div class="nd">
+                                      <p>Tên: ${user.name}</p>
+                                          <p>SDT: ${user.phone}</p>
+                                          <p>Email: ${user.email}</p>
+                                </div>
+                    `
+        var popups = document.querySelectorAll(".popup");
+
+        // Duyệt qua từng phần tử và thiết lập thuộc tính style.display và innerHTML
+        popups.forEach(function (popupElement) {
+            popupElement.style.display = "block";
+            popupElement.innerHTML = popup;
+        });
+    }
+
+</script>

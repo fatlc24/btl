@@ -25,48 +25,43 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1 justify-content-end nav-right">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="usermanual">Hướng dẫn sử dụng</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="">đăng ký thuê xe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Lease" asp-action="Lease">đăng ký cho thuê xe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="news">Tin tức</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="contact">liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            @if (TempData["idLoginData"] == null)
-                            {
-                            <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="access" asp-action="login">đăng nhập</a>
-                            }else{
-                                <span class="mb-0 nav-link text-dark"> xin chào: @TempData["LoginData_name"] <a class="text-dark" asp-area="" asp-controller="Home" asp-action="Logout"><i class="fa-solid fa-right-to-bracket ms-2"></i></a></span>
-                            }
-                        </li> 
-                        @* <li class="nav-item ">
-                            @if (HttpContextAccessor.HttpContext.Session.GetString("username") == null)
-                            {
-                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Access" asp-action="Login">đăng nhập</a>
-                            }else
-
-                            {
-                            
-                            }
-                        </li>
-                        <li class="nav-item">
-                            @if (HttpContextAccessor.HttpContext.Session.GetString("username") != null)
-                            {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Access" asp-action="Logout">@HttpContextAccessor.HttpContext.Session.GetString("username") <i class="fa-solid fa-right-to-bracket"></i></a>
-                                 
-                            }
-                        </li> *@
-                    </ul>
+                    @if (TempData["idLoginData"] == null)
+                    {
+                        <ul class="navbar-nav flex-grow-1 justify-content-end nav-right">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="usermanual">Hướng dẫn sử dụng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="news">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="access" asp-action="login">đăng nhập</a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav flex-grow-1 justify-content-end nav-right">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="usermanual">Hướng dẫn sử dụng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Rent" asp-action="Rent">đăng ký thuê xe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Lease" asp-action="Lease">đăng ký cho thuê xe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="news">Tin tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-capitalize" asp-area="" asp-controller="Home" asp-action="contact">liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="mb-0 nav-link text-dark"> <a class="text-dark text-decoration-none" asp-area="" asp-controller="User" asp-action="MyProfile">xin chào: @TempData["LoginData_name"]</a> <a class="text-dark" asp-area="" asp-controller="Home" asp-action="Logout"><i class="fa-solid fa-right-to-bracket ms-2"></i></a></span>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>
@@ -90,7 +85,6 @@
                     <h6>Về chúng tôi</h6>
                 </div>
                 <div class="col-md-4">
-                    
                 </div>
                 <div class="col-md-4">
                     <ul class="list-unstyled">

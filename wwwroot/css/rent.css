@@ -1,0 +1,69 @@
+﻿.banner .name-banner {
+    top: 35%;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+}
+.banner img {
+    width: 100%;
+}
+.banner .breadcrumb {
+    position: absolute;
+    top: 49%;
+    align-items: center;
+}
+
+    .banner .breadcrumb .breadcrumb-item a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .banner .breadcrumb .breadcrumb-item.active {
+        color: #fe0002;
+    }
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
+}
+.list-xe .item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+    .list-xe .item .name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .list-xe .item .tien,
+    .list-xe .item .nam,
+    .list-xe .item .trang-thai {
+        color: #7a7a7a;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .list-xe .item .btn-chi-tiet {
+        padding: 10px 16px;
+        background-color: #f3f3f3;
+        border-radius: 4px;
+        color: #154194;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .list-xe .item:hover {
+        border: 1px solid #154194;
+    }
+
+        .list-xe .item:hover .btn-chi-tiet {
+            background-color: #154194;
+            color: #fff;
+        }

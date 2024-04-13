@@ -5,6 +5,10 @@
     color: #fff;
 }
 
+.banner img {
+    width: 100%;
+}
+
 .banner .breadcrumb {
     position: absolute;
     top: 49%;
@@ -21,6 +25,7 @@
     .banner .breadcrumb .breadcrumb-item.active {
         color: #fe0002;
     }
-.breadcrumb-item + .breadcrumb-item::before{
-    color:#fff;
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
 }

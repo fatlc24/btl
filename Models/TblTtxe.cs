@@ -17,6 +17,12 @@ public partial class TblTtxe
 
     public int? Namsanxuat { get; set; }
 
+    public string? Tien { get; set; }
+
+    public string? IsCheck { get; set; }
+
+    public int? Publish {  get; set; }
+
     public virtual TblUser? IdUserNavigation { get; set; }
 
     public virtual ICollection<TblThuexe> TblThuexes { get; set; } = new List<TblThuexe>();

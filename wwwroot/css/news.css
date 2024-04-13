@@ -5,7 +5,9 @@
     font-weight: 700;
     color: #fff;
 }
-
+.banner img {
+    width: 100%;
+}
 .banner .breadcrumb {
     position: absolute;
     top: 49%;

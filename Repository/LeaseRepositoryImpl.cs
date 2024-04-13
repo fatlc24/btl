@@ -21,7 +21,7 @@ namespace BTLwebNC.Repository
             if (userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId))
             {
 
-                var user = _context.TblTtxes.SingleOrDefault(p => p.IdUser == userId);
+                var user = _context.TblTtxes.FirstOrDefault(p => p.IdUser == userId);
                 TblTtxe result = new TblTtxe
                 {
                     IdUser = userId,
@@ -29,6 +29,7 @@ namespace BTLwebNC.Repository
                     Status = lease.Status,
                     Namsanxuat = lease.Namsanxuat,
                     Image = lease.Image,
+                    Tien = lease.Tien,
                 };
                 _context.TblTtxes.Add(result);
                 _context.SaveChanges();

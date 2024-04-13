@@ -3,6 +3,11 @@
     ViewData["Title"] = "Đăng ký cho thuê xe";
     <link href="~/css/lease.css" rel="stylesheet" />
 }
+<style>
+    .banner img {
+        width: 100%;
+    }
+</style>
 <div class="banner position-relative">
     <img src="~/images/banner/lien-he.png" alt="Alternate Text" class="img-fluid" />
     <div class="container">
@@ -36,6 +41,12 @@
                         <div class="form-group mb-3">
                             <label for="namsanxuat" class="form-label">Năm sản xuất<strong class="text-danger">*</strong></label>
                             <input type="text" class="form-control" id="namsanxuat" maxlength="50" required="required" name="namsanxuat" value="" asp-for="Namsanxuat">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="Tien" class="form-label">Tiền<strong class="text-danger">*</strong></label>
+                            <input type="text" class="form-control" id="Tien" maxlength="50" required="required" name="Tien" value="" asp-for="Tien">
                         </div>
                     </div>
                     <div class="col-md-12">
