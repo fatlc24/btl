@@ -26,6 +26,11 @@ namespace BTLwebNC.Repository
             return _context.TblTtxes.Where(x => x.Publish == 1 && x.IsCheck == "1").ToList();
         }
 
+        public List<TblTtxe> GetAllXeIScheckfalse()
+        {
+            return _context.TblTtxes.Where(x => x.Publish == 1 && x.IsCheck == "0").ToList();
+        }
+
         public TblTtxe GetTtxe(int id)
         {
             return _context.TblTtxes.Find(id);
