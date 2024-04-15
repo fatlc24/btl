@@ -30,6 +30,8 @@ namespace BTLwebNC.Repository
                     Namsanxuat = lease.Namsanxuat,
                     Image = lease.Image,
                     Tien = lease.Tien,
+                    Publish = 1,
+                    IsCheck = "1",
                 };
                 _context.TblTtxes.Add(result);
                 _context.SaveChanges();
