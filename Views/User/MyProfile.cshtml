@@ -1,7 +1,56 @@
-﻿@{
+﻿@model MyProfile;
+@{
     ViewData["Title"] = "Trang cá nhân";
     <link href="~/css/user.css" rel="stylesheet" />
 }
+<style>
+    .thuexe .list-thuexe .title-thuexe {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .thuexe .list-thuexe .item {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+    }
+
+        .thuexe .list-thuexe .item .name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .thuexe .list-thuexe .item .bot .tien,
+        .thuexe .list-thuexe .item .bot .nam,
+        .thuexe .list-thuexe .item .bot .trang-thai {
+            color: #7a7a7a;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .thuexe .list-thuexe .item .btn-chi-tiet {
+            padding: 10px 16px;
+            background-color: #f3f3f3;
+            border-radius: 4px;
+            color: #154194;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .thuexe .list-thuexe .item:hover {
+            border: 1px solid #154194;
+        }
+
+            .thuexe .list-thuexe .item:hover .btn-chi-tiet {
+                background-color: #154194;
+                color: #fff;
+            }
+</style>
 <div class="banner position-relative">
     <img src="~/images/banner/lien-he.png" alt="Alternate Text" class="img-fluid" />
     <div class="container">
@@ -14,6 +63,198 @@
         </nav>
     </div>
 </div>
-<div class="containter">
-
+<div class="container">
+    <div class="ttxe">
+        @if (Model.Listttxe != null)
+        {
+            <div class="list-xe">
+                <h2 class="text-center title-ttxe py-4">Danh sách bạn đã đăng cho thuê xe (@Model.Listttxe.Count()) </h2>
+                <div class="row">
+                    @foreach (var item in Model.Listttxe)
+                    {
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <p class="name">@item.Tenxe</p>
+                                        <div class="bot d-flex justify-content-between ">
+                                            <p class="mb-0 trang-thai">
+                                                <img src="/images/rent/status.svg" />
+                                                @item.Status
+                                            </p>
+                                            <p class="mb-0 nam">
+                                                <img src="/images/rent/lich.svg" />
+                                                @item.Namsanxuat
+                                            </p>
+                                            <p class="mb-0 tien">
+                                                <img src="/images/rent/money.svg" />
+                                                @Convert.ToDecimal(item.Tien).ToString("N0") VNĐ
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-auto">
+                                        <button onclick="onclickGetUser(event)" type="button" class="btn btn-primary text-capitalize btn-chi-tiet" data-id-user="@item.IdUser" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.Id">
+                                            Chi tiết
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+    <div class="thuexe">
+        @if (Model.ListThuexe != null)
+        {
+            <div class="list-thuexe">
+                <h2 class="text-center title-thuexe py-4 text-capitalize">đây là danh sách bạn thuê (@Model.ListThuexe.Count())</h2>
+                <div class="row">
+                    @foreach (var item in Model.ListThuexe)
+                    {
+                        @foreach (var item1 in Model.tblTtxes)
+                        {
+                            @if (item.IdTtxe == item1.Id)
+                            {
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <p class="name">@item1.Tenxe</p>
+                                                <div class="bot d-flex justify-content-between ">
+                                                    <p class="mb-0 trang-thai">
+                                                        <img src="/images/rent/status.svg" />
+                                                        @item1.Status
+                                                    </p>
+                                                    <p class="mb-0 nam">
+                                                        <img src="/images/rent/lich.svg" />
+                                                        @item1.Namsanxuat
+                                                    </p>
+                                                    <p class="mb-0 tien">
+                                                        <img src="/images/rent/money.svg" />
+                                                        @Convert.ToDecimal(item1.Tien).ToString("N0") VNĐ
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 my-auto">
+                                                <button type="button" class="btn btn-primary text-capitalize btn-chi-tiet"  data-bs-toggle="modal" data-bs-target="#exampleModal1-@item1.Id">
+                                                    Chi tiết
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        }
+    </div>
 </div>
+
+<!-- Button trigger modal -->
+@foreach (var item in Model.Listttxe)
+{
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông tin xe @item.Tenxe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="title">Thông tin</div>
+                            <div class="popup"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="@item.Image" alt="Alternate Text" class="img-fluid" />
+                            <p class="text-center">@item.Tenxe</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Tên Xe: @item.Tenxe</p>
+                            <p>Giá: @item.Tien</p>
+                            <p>Tình trạng: @item.Status</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Button trigger modal -->
+@foreach (var item in Model.tblTtxes)
+{
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông tin xe @item.Tenxe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="title">Thông tin</div>
+                            <p>Tên Xe: @item.Tenxe</p>
+                            <p>Giá: @item.Tien</p>
+                            <p>Tình trạng: @item.Status</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="@item.Image" alt="Alternate Text" class="img-fluid" />
+                            <p class="text-center">@item.Tenxe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    function onclickGetUser(event) {
+        // Lấy giá trị của thuộc tính 'data-id-user'
+        var userId = event.target.getAttribute('data-id-user');
+        // In ra giá trị userId để kiểm tra
+        console.log("User ID:", userId);
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var user = JSON.parse(xhr.responseText);
+                    console.log(user);
+                    showUser(user);
+                } else {
+                    console.error('Lỗi: ' + xhr.status);
+                }
+            }
+        };
+        xhr.open('GET', `/Rent/Getuser?id=` + userId, true);
+        xhr.send();
+    }
+    function showUser(user) {
+        console.log(user);
+        let popup = `
+                                        <div class="nd">
+                                                      <p>Tên: ${user.name}</p>
+                                                          <p>SDT: ${user.phone}</p>
+                                                          <p>Email: ${user.email}</p>
+                                                </div>
+                                    `
+        var popups = document.querySelectorAll(".popup");
+
+        // Duyệt qua từng phần tử và thiết lập thuộc tính style.display và innerHTML
+        popups.forEach(function (popupElement) {
+            popupElement.style.display = "block";
+            popupElement.innerHTML = popup;
+        });
+    }
+
+</script>

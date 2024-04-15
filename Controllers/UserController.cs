@@ -1,13 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BTLwebNC.Models;
+using BTLwebNC.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace BTLwebNC.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IUserRepository userRepository;
+        private readonly IRentRepository rentRepository;
+        public UserController(IUserRepository userRepository, IRentRepository rentRepository)
+        {
+            this.userRepository = userRepository;
+            this.rentRepository = rentRepository;
+        }
         public IActionResult Index()
         {
-            return View();
+            return View("MyProfile");
         }
         public IActionResult MyProfile()
         {
@@ -39,7 +48,14 @@ namespace BTLwebNC.Controllers
 
                 // You can also access your custom claim ("OtherProperties" in this case) in a similar manner.
             }
-            return View();
+            var result = new MyProfile();
+            var ListTtxe = userRepository.GetTtxeList();
+            var ListThuexe = userRepository.GetThuexeList();
+            result.Listttxe = ListTtxe;
+            result.ListThuexe = ListThuexe;
+            var ttxeByID = rentRepository.GetAllXeIScheckfalse();
+            result.tblTtxes = ttxeByID;
+            return View(result);
         }
     }
 }

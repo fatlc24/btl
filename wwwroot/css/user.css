@@ -29,3 +29,48 @@
 .breadcrumb-item + .breadcrumb-item::before {
     color: #fff;
 }
+.ttxe .list-xe .title-ttxe {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+.ttxe .list-xe .item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+    .ttxe .list-xe .item .name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .ttxe .list-xe .item .tien,
+    .ttxe .list-xe .item .nam,
+    .ttxe .list-xe .item .trang-thai {
+        color: #7a7a7a;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .ttxe .list-xe .item .btn-chi-tiet {
+        padding: 10px 16px;
+        background-color: #f3f3f3;
+        border-radius: 4px;
+        color: #154194;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .ttxe .list-xe .item:hover {
+        border: 1px solid #154194;
+    }
+
+        .ttxe .list-xe .item:hover .btn-chi-tiet {
+            background-color: #154194;
+            color: #fff;
+        }
