@@ -23,7 +23,13 @@ namespace BTLwebNC.Repository
         }
         public List<TblTtxe> GetAllXe()
         {
-            return _context.TblTtxes.Where(x => x.Publish == 1 && x.IsCheck == "1").ToList();
+            var principal = httpContextAccessor.HttpContext.User;
+            var userIdClaim = principal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim != null && int.TryParse(userIdClaim.Value, out int userId))
+            { 
+                return _context.TblTtxes.Where(x => x.Publish == 1 && x.IsCheck == "1" && x.IdUser != userId).ToList();
+            }
+            return null;
         }
 
         public List<TblTtxe> GetAllXeIScheckfalse()
