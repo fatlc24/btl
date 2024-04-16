@@ -1,0 +1,14 @@
+﻿@model TblNews
+@{
+    ViewData["Title"] = "Admin update News";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <h2 class="text-center text-black">Chỉnh sửa bài viết</h2>
+    <form asp-controller="Admin" asp-action="UpdateNew" method="post">
+        <input type="text" name="Name" value="@Model.Name" asp-for="Name" class="form-control mt-3" />
+        <input type="text" name="image" value="@Model.Image" asp-for="Image" class="form-control my-3" />
+        <textarea class="form-control" asp-for="Content"></textarea>
+        <button class=" btn btn-primary mt-3" style="width:100px; " type="submit">Sửa</button>
+    </form>
+</div>

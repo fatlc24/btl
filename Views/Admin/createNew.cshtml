@@ -1,0 +1,22 @@
+﻿@model TblNews
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container my-4">
+    <form asp-controller="Admin" asp-action="createNew">
+        <div>
+            <label for="Name" class="form-label"> Nhập tên bài viết</label>
+            <input type="text" id="Name" asp-for="Name" class="form-control" />
+        </div>
+        <div>
+            <label for="Content" class="form-label"> Nhập Nội dung bài viết</label>
+            <textarea id="Content" asp-for="Content" class="form-control"></textarea>
+        </div>
+        <div>
+            <label for="Image" class="form-label"> Nhập đường dẫn hình ảnh</label>
+            <input type="text" id="Image" asp-for="Image" class="form-control" />
+        </div>
+        <button class="btn btn-success mt-3" type="submit">Create</button>
+    </form>
+</div>
