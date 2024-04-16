@@ -1,5 +1,57 @@
-﻿@{
+﻿@model List<TblNews>
+@{
     ViewData["Title"] = "Admin";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    <link href="~/css/news.css" rel="stylesheet" />
 }
-đăng tin
+<div class="container">
+    <a href="/Admin/createNew">Tạo bài viết</a>
+</div>
+<div class="container">
+    <h2 class="text-center py-3">Bài viết đã đăng</h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4" id="news_item_@item.Id">
+                <a class="item-new-cat text-decoration-none" asp-controller="Home" asp-action="NewsDetail" asp-route-id="@item.Id">
+                    <div class="overflow-hidden">
+                        <img src="@item.Image" alt="@item.Name" />
+                    </div>
+                    <p class="mb-0 text-decoration-none text-break text-black">@item.Name</p>
+                    <div class="time">@item.Time?.ToString("dd/MM/yyyy")</div>
+                </a>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="deleteIcon" data-id-delete="@item.Id"><i class="fa-solid fa-trash"></i></div>
+                    <a class="editNew text-decoration-none" asp-action="UpdateNew" asp-controller="Admin" asp-route-id="@item.Id" data-id-new-update="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    document.querySelectorAll(".deleteIcon").forEach(icon => {
+        icon.addEventListener("click", function () {
+            var newID = this.getAttribute("data-id-delete");
+            var confirmation = confirm("Bạn có chắc muốn xóa bài viết này?");
+            if (confirmation) {
+                deletePost(newID);
+            }
+        });
+    });
+    function deletePost(newID) {
+        // var baseURL = "http://localhost:5051";
+        var xhr = new XMLHttpRequest();
+        xhr.open("DELETE", `/deleteNewByID/${newID}`, true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById(`news_item_${newID}`).remove(); // Remove the post container
+                } else {
+                    alert("Xóa bài viết không thành công.");
+                }
+            }
+        };
+        xhr.send();
+    }
+</script>

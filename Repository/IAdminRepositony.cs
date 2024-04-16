@@ -6,5 +6,10 @@ namespace BTLwebNC.Repository
     {
         List<TblUser> GetTblUsers();
         List<TblContact> GetTblContacts();
+        List<TblNews> GetAllNews();
+        TblNews createNew(TblNews news);
+        void deleteNewByID(int id);
+        TblNews getNewById(int id);
+        TblNews updateNew(int id,TblNews news);
     }
 }

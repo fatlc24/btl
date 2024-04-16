@@ -3,76 +3,24 @@
   "WorkspaceRootPath": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\admin\\adminnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\admin\\adminnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\admin\\admincontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\admin\\admincontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\models\\modelsadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:models\\modelsadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\home\\newsdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\home\\newsdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\home\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\home\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\models\\modelsnews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:models\\modelsnews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\models\\myprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:models\\myprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\newsrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\newsrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\admin\\updatenew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\admin\\updatenew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\adminrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\adminrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\irentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\irentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\contactrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\contactrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\leaserepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\leaserepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\views\\admin\\adminnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:views\\admin\\adminnews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\repository\\iadminrepositony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:repository\\iadminrepositony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|d:\\fithou\\web nc\\visual\\btlwebnc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7064D258-5F36-44DC-92FA-BA9ADADF1858}|BTLwebNC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,8 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateNew.cshtml",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\UpdateNew.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\UpdateNew.cshtml",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\UpdateNew.cshtml",
+              "RelativeToolTip": "Views\\Admin\\UpdateNew.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-16T15:50:26.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAswIgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T15:17:56.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminRepositoryImpl.cs",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\AdminRepositoryImpl.cs",
+              "RelativeDocumentMoniker": "Repository\\AdminRepositoryImpl.cs",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\AdminRepositoryImpl.cs",
+              "RelativeToolTip": "Repository\\AdminRepositoryImpl.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAIwE8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T15:15:08.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAdminRepositony.cs",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IAdminRepositony.cs",
+              "RelativeDocumentMoniker": "Repository\\IAdminRepositony.cs",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IAdminRepositony.cs",
+              "RelativeToolTip": "Repository\\IAdminRepositony.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T15:14:28.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminNews.cshtml",
+              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminNews.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AdminNews.cshtml",
+              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminNews.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AdminNews.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-16T15:09:37.241Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -95,226 +108,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminNews.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminNews.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminNews.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminNews.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminNews.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-16T02:15:19.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminContact.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminContact.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\AdminContact.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\AdminContact.cshtml",
-              "RelativeToolTip": "Views\\Admin\\AdminContact.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T15:58:44.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAACCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T16:23:39.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NewsDetail.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Home\\NewsDetail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\NewsDetail.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Home\\NewsDetail.cshtml",
-              "RelativeToolTip": "Views\\Home\\NewsDetail.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T16:11:59.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "news.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Home\\news.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\news.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Home\\news.cshtml",
-              "RelativeToolTip": "Views\\Home\\news.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T16:11:56.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ModelsAdmin.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\ModelsAdmin.cs",
-              "RelativeDocumentMoniker": "Models\\ModelsAdmin.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\ModelsAdmin.cs",
-              "RelativeToolTip": "Models\\ModelsAdmin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:00:12.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-15T15:58:48.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFMAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:57:56.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ModelsNews.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\ModelsNews.cs",
-              "RelativeDocumentMoniker": "Models\\ModelsNews.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\ModelsNews.cs",
-              "RelativeToolTip": "Models\\ModelsNews.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:07:01.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MyProfile.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\MyProfile.cs",
-              "RelativeDocumentMoniker": "Models\\MyProfile.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Models\\MyProfile.cs",
-              "RelativeToolTip": "Models\\MyProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:00:33.884Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NewsRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\NewsRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\NewsRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\NewsRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\NewsRepositoryImpl.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:57:13.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LeaseRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\LeaseRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\LeaseRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\LeaseRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\LeaseRepositoryImpl.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:57:08.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IcontactRepository.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IcontactRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IcontactRepository.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IcontactRepository.cs",
-              "RelativeToolTip": "Repository\\IcontactRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:57:06.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ContactRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\ContactRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\ContactRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\ContactRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\ContactRepositoryImpl.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:56:27.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IRentRepository.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IRentRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IRentRepository.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IRentRepository.cs",
-              "RelativeToolTip": "Repository\\IRentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:53:21.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminRepositoryImpl.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\AdminRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "Repository\\AdminRepositoryImpl.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\AdminRepositoryImpl.cs",
-              "RelativeToolTip": "Repository\\AdminRepositoryImpl.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:47:48.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:52:10.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IAdminRepositony.cs",
-              "DocumentMoniker": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IAdminRepositony.cs",
-              "RelativeDocumentMoniker": "Repository\\IAdminRepositony.cs",
-              "ToolTip": "D:\\FITHOU\\web nc\\visual\\BTLwebNC\\Repository\\IAdminRepositony.cs",
-              "RelativeToolTip": "Repository\\IAdminRepositony.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:47:22.749Z"
             }
           ]
         }
