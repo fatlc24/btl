@@ -1,0 +1,51 @@
+﻿@model ModelsAdmin
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    int count = 0;
+}
+<div class="container">
+    @foreach (var item in Model.adminContact)
+    {
+        @foreach (var item1 in Model.adminUser)
+        {
+            @if (item.IdUser == item1.Id)
+            {
+                <div class="item @(count % 2 == 0 ? "bg-primary" :"") ">
+                    <div class="row">
+                        <div class="col-md-4">Tên</div>
+                        <div class="col-md-8">
+                            <input class="form-control" value="@item1.Name" disabled />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">SDT</div>
+                        <div class="col-md-8">
+                            <input class="form-control" value="@item1.Phone" disabled />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Email</div>
+                        <div class="col-md-8">
+                            <input class="form-control" value="@item1.Email" disabled />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Tiêu đề</div>
+                        <div class="col-md-8">
+                            <input class="form-control" value="@item.Title" disabled />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Nội dung</div>
+                        <div class="col-md-8">
+                            <textarea cols="10" rows="10" class="form-control" disabled>@item.Content</textarea>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        count++;
+    }
+
+</div>

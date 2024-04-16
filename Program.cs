@@ -18,6 +18,7 @@ builder.Services.AddScoped<INewsRepository, NewsRepositoryImpl>();
 builder.Services.AddScoped<ILeaseRepository, LeaseRepositoryImpl>();
 builder.Services.AddScoped<IRentRepository, RentRepositoryImpl>();
 builder.Services.AddScoped<IUserRepository, UserRepositoryImpl>();
+builder.Services.AddScoped<IAdminRepositony, AdminRepositoryImpl>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => {
     option.LoginPath = "/Access/Login";

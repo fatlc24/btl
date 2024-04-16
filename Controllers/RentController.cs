@@ -70,7 +70,7 @@ namespace BTLwebNC.Controllers
             var resual = rentRepository.saveRent(id);
             rentRepository.UpdateIscheck(id);
             //cần trả về vào myprofile
-            return RedirectToAction("User", "MyProfile");
+            return RedirectToAction("MyProfile", "User");
         }
 
     }
